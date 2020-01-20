@@ -56,7 +56,6 @@ def bot_action(instance):
         for comment in comments:
             message = quote_generator.cole_quote()
 
-
             #within the iteration of the comment stream, if the comment contains the kewords, AND the comment ID is not
             #in the tuple, Reply with a random quote
             if re.search('gordon cole', comment.body, re.IGNORECASE) and comment.id not in comment_list:
