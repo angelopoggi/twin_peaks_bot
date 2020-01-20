@@ -55,7 +55,7 @@ def bot_action(instance):
         #Also checking the author and saving it to a variable if we want to use it later
         for comment in comments:
             message = quote_generator.cole_quote()
-            print(comment_list)
+
 
             #within the iteration of the comment stream, if the comment contains the kewords, AND the comment ID is not
             #in the tuple, Reply with a random quote
