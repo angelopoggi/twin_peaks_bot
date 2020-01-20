@@ -1,0 +1,4 @@
+[packages]
+re
+praw 6.5.1
+time
