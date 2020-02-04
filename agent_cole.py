@@ -40,7 +40,7 @@ def bot_action(instance):
         comment_list = comments_file.read()
         comment_list = comment_list.split('\n')
         #comment_tuple.append(comment_list)
-        print(comment_list)
+
 
 
         #Tapping into the subreddit
