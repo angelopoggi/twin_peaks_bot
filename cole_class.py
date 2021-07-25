@@ -2,12 +2,12 @@
 #2021 - Angelo Poggi
 
 import praw
-from common/config.py username,password,secret,agent,client,subreddit
+from common.config import username,password,secret,agent,client,subreddit
 import random
 import re
 import time
 
-class Cole:
+class Robot:
     '''Reddit Comment Bot'''
     def __init__(self,instance,speak,subreddit,file,match,quote):
         self.start = instance
@@ -16,7 +16,6 @@ class Cole:
         self.file = file
         self.match = match
         self.quote = quote
-
 
     def bot_login(self):
         '''Login method'''
@@ -50,12 +49,16 @@ class Cole:
         space = reddit_instance.subreddit(self.subreddit)
         comments = space.stream.comments()
         for comment in comments:
-            if re.search(self.match, comment.body, re.IGNORECASE) and comment.id not in commment_list:
+            if re.search(self.match, comment.body, re.IGNORECASE) and comment.id not in comment_list:
                 comment.reply(f'{self.message}')
                 comment_list.append(comment.id)
                 comment_file.write(f'{comment.id}\n')
                 time.sleep(300)
 
+
+if __name__ == '__main__':
+    #Im expecting here Robot.start()
+    redditBot = Robot.bot_login()
 
 
 
